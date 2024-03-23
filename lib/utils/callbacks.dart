@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:toastification/toastification.dart';
 
 import 'shared.dart';
@@ -20,4 +22,61 @@ void showToast(BuildContext context, String message, Color color) {
   );
 }
 
-Future<void> init() async {}
+Future<void> init() async {
+  Hive.init((await getApplicationDocumentsDirectory()).path);
+  user = await Hive.openBox("user");
+  if (!user!.containsKey("host 1")) {
+    user!.put(
+      "host 1",
+      <String, dynamic>{
+        "name": "First Host",
+        "type": "Active",
+      },
+    );
+  }
+  if (!user!.containsKey("host 2")) {
+    user!.put(
+      "host 2",
+      <String, dynamic>{
+        "name": "Second Host",
+        "type": "Active",
+      },
+    );
+  }
+  if (!user!.containsKey("host 3")) {
+    user!.put(
+      "host 3",
+      <String, dynamic>{
+        "name": "Third Host",
+        "type": "Active",
+      },
+    );
+  }
+  if (!user!.containsKey("host 4")) {
+    user!.put(
+      "host 4",
+      <String, dynamic>{
+        "name": "Fourth Host",
+        "type": "Active",
+      },
+    );
+  }
+  if (!user!.containsKey("host 5")) {
+    user!.put(
+      "host 5",
+      <String, dynamic>{
+        "name": "Fifth Host",
+        "type": "Active",
+      },
+    );
+  }
+  if (!user!.containsKey("host 6")) {
+    user!.put(
+      "host 6",
+      <String, dynamic>{
+        "name": "Sixth Host",
+        "type": "Active",
+      },
+    );
+  }
+}

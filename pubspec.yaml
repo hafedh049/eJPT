@@ -9,9 +9,10 @@ environment:
   sdk: ">=3.3.2 <4.0.0"
 
 dependencies:
-  animated_loading_border: ^0.0.2
   flutter:
     sdk: flutter
+
+  animated_loading_border: ^0.0.2
   flutter_animate: ^4.5.0
   google_fonts: ^6.2.1
   hive: ^2.2.3
@@ -20,6 +21,13 @@ dependencies:
   path_provider: ^2.1.2
   sidebarx: ^0.16.3
   toastification: ^1.2.1
+  animated_toggle_switch: ^0.8.2
+  date_format: ^2.0.7
+  super_clipboard: ^0.8.5
+  flutter_json_view: ^1.1.4
+  video_player_win: ^2.3.5
+  flutter_widget_from_html: ^0.14.11
+  animated_emoji: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -32,3 +40,5 @@ flutter:
 
   assets:
     - assets/
+    - assets/images/
+    - assets/lotties/

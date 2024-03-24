@@ -27,10 +27,14 @@ class _HomeState extends State<Home> {
             const SideBar(),
             const SizedBox(width: 20),
             Expanded(
-              child: PageView.builder(
-                controller: screensController,
-                itemBuilder: (BuildContext context, int index) => screens[index],
-                itemCount: screens.length,
+              child: Container(
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(color: darkColor, borderRadius: BorderRadius.circular(15)),
+                child: PageView.builder(
+                  controller: screensController,
+                  itemBuilder: (BuildContext context, int index) => screens[index],
+                  itemCount: screens.length,
+                ),
               ),
             ),
           ],
